@@ -1,5 +1,5 @@
 {% set name = "analytics-python" %}
-{% set version = "1.2.9" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f3d1ca27cb277da67c10d71a5c9c593d2a9ec99109e31409ab771b44821a86bf
+  sha256: a65141ab6e47db396f5bc5708b1db93ff9a99882d81fe808228afd5ebb6dfe5f
 
 build:
   noarch: python
@@ -94,10 +94,12 @@ about:
     for you. You can get a Segment Team plan  (up to <b>$25,000 value</b> in Segment credits) for free up to 2 years
     [apply here](https://segment.com/startups/)!
 
-
+    PyPI: [https://pypi.org/project/analytics-python](https://pypi.org/project/analytics-python)
+    
   doc_url: https://segment.com/libraries/python
   dev_url: https://github.com/segmentio/analytics-python
 
 extra:
   recipe-maintainers:
     - BrentDorsey
+    - sugatoray
