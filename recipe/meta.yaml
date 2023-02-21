@@ -1,35 +1,38 @@
 {% set name = "analytics-python" %}
-{% set version = "1.4.0" %}
+{% set pypi_name = "segment-analytics-python" %}
+{% set version = "2.2.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a65141ab6e47db396f5bc5708b1db93ff9a99882d81fe808228afd5ebb6dfe5f
+  url: https://pypi.io/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
+  sha256: 10ef6ee42b9e504b9db76b44c893e6a44c3ebc51cd01f475ac76f0e80a8fff09
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
   run:
-    - python >=3.6
-    - backoff ==1.10.0
+    - python >=3.8
+    - backoff >=2.1
     - monotonic >=1.5
-    - python-dateutil >2.1
-    - requests >=2.7,<3.0
-    - six >=1.5
+    - python-dateutil >=2.2
+    - requests >=2.7
 
 test:
   imports:
-    - analytics
-    - analytics.test
+    - segment
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/segmentio/analytics-python
@@ -44,12 +47,12 @@ about:
       <p><b><i>You can't fix what you can't measure</i></b></p>
     </div>
 
-    Analytics helps you measure your users, product, and business. 
-    It unlocks insights into your app's funnel, core business metrics, 
+    Analytics helps you measure your users, product, and business.
+    It unlocks insights into your app's funnel, core business metrics,
     and whether you have a product-market fit.
 
     PyPI: [https://pypi.org/project/analytics-python](https://pypi.org/project/analytics-python)
-  
+
   doc_url: https://segment.com/libraries/python
   dev_url: https://github.com/segmentio/analytics-python
 
@@ -57,3 +60,4 @@ extra:
   recipe-maintainers:
     - BrentDorsey
     - sugatoray
+    - hadim
