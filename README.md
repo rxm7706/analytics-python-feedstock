@@ -1,11 +1,11 @@
-About analytics-python
-======================
+About analytics-python-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/analytics-python-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/segmentio/analytics-python
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/analytics-python-feedstock/blob/main/LICENSE.txt)
 
 Summary: The hassle-free way to integrate analytics into any python application.
 
@@ -113,7 +113,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
@@ -162,5 +162,7 @@ Feedstock Maintainers
 =====================
 
 * [@BrentDorsey](https://github.com/BrentDorsey/)
+* [@hadim](https://github.com/hadim/)
 * [@sugatoray](https://github.com/sugatoray/)
+* [@thewchan](https://github.com/thewchan/)
 
